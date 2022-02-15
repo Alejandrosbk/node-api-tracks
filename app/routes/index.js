@@ -22,4 +22,8 @@ router.get('*', (req, res) => {
     res.send({ error: 'Not found' })
 })
 
+router.get('/hello-world', (req, res) => {
+    res.send('Hello World')
+})
+
 module.exports = router
