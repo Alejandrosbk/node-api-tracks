@@ -4,12 +4,12 @@ const cors = require('cors')
 const app = express()
 const { dbConnect } = require('./config/mongo')
 
-const PORT = process.env.PORT || 3000
+const port = process.env.PORT || 3000
 app.use(cors())
 app.use(express.json())
 app.use(express.static('public'));
 app.use('/api/1.0', require('./app/routes'))
 
-app.listen(PORT, () => {
-    console.log(`Tu API es http://localhost:${PORT}/api/1.0`)
+app.listen(port, () => {
+    console.log('Servidor corriendo en el puerto ' + port)
 });
